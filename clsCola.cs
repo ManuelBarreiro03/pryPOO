@@ -24,13 +24,13 @@ namespace pryPOO
         }
         public void Agregar(clsNodo Nuevo) 
         {
-            if (Primero == null && Ultimo == null)
+            if (Primero == null)
             {
                 Primero = Nuevo;
             }
             else
             {
-                Ultimo.Siguiente = Nuevo;
+                Primero.Siguiente = Nuevo;
             }
         }
         public void eliminar() 

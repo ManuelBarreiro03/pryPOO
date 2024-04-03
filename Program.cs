@@ -16,7 +16,7 @@ namespace pryPOO
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDeuda());
+            Application.Run(new frmCola());
         }
     }
 }
