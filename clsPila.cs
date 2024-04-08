@@ -3,24 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
 using System.Windows.Forms;
+using System.IO;
 
 namespace pryPOO
 {
-    internal class clsCola
+    internal class clsPila
     {
         private clsNodo pri;
-        private clsNodo ult;
         public clsNodo Primero
         {
             get { return pri; }
             set { pri = value; }
-        }
-        public clsNodo Ultimo
-        {
-            get { return ult; }
-            set { ult = value; }
         }
         public void Agregar(clsNodo Nuevo) 
         {
@@ -30,30 +24,25 @@ namespace pryPOO
             }
             else
             {
-                Primero.Siguiente = Nuevo;
-                Primero.Siguiente = Primero;
+                Nuevo.Siguiente = Primero;
+                Primero = Nuevo;
             }
         }
-        public void eliminar() 
+        public void Eliminar() 
         {
-            if (Primero==Ultimo)
-            {
-                Primero = null;
-                Ultimo = null;
-            }
-            else
+            if (Primero!=null)
             {
                 Primero = Primero.Siguiente;
             }
         }
         public void Recorrer(DataGridView Grilla) 
         {
-            clsNodo Aux = Primero;
+            clsNodo aux = Primero;
             Grilla.Rows.Clear();
-            while (Aux != null)
+            while (aux != null)
             {
-                Grilla.Rows.Add(Aux.Codigo, Aux.Nombre, Aux.Tramite);
-                Aux = Aux.Siguiente;
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Siguiente;
             }
         }
         public void Recorrer(ListBox Lista)
@@ -66,7 +55,7 @@ namespace pryPOO
                 Aux = Aux.Siguiente;
             }
         }
-        public void Recorrer(ComboBox Combo) 
+        public void Recorrer(ComboBox Combo)
         {
             clsNodo Aux = Primero;
             Combo.Items.Clear();
