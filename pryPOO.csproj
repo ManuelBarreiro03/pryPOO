@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="clsCliente.cs" />
     <Compile Include="clsCola.cs" />
+    <Compile Include="clsListaSimple.cs" />
     <Compile Include="clsNodo.cs" />
     <Compile Include="clsPila.cs" />
     <Compile Include="frmDeuda.cs">
@@ -61,6 +62,12 @@
     </Compile>
     <Compile Include="frmCola.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaSimple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaSimple.Designer.cs">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPila.cs">
       <SubType>Form</SubType>
@@ -81,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaSimple.resx">
+      <DependentUpon>frmListaSimple.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>
@@ -113,6 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\f.elconfidencial.com_original_d9e_66d_793_d9e66d793adbc994841e60850a17e61c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoDePantalla.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -34,5 +34,11 @@ namespace pryPOO
             frmPila ventanaDeuda = new frmPila();
             ventanaDeuda.Show();
         }
+
+        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaSimple ventanaDeuda = new frmListaSimple();
+            ventanaDeuda.Show();
+        }
     }
 }

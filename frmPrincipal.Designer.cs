@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.informaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmDeuda = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,7 +41,7 @@
             this.personalizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.informaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaSimpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,13 @@
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(136, 6);
+            // 
+            // informaciónToolStripMenuItem
+            // 
+            this.informaciónToolStripMenuItem.Name = "informaciónToolStripMenuItem";
+            this.informaciónToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.informaciónToolStripMenuItem.Text = "Información";
             // 
             // editarToolStripMenuItem
             // 
@@ -77,7 +84,8 @@
             this.toolStripSeparator3,
             this.tsmDeuda,
             this.tsmCola,
-            this.tsmPila});
+            this.tsmPila,
+            this.listaSimpleToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
             this.editarToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.editarToolStripMenuItem.Text = "No lineal";
@@ -138,19 +146,20 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::pryPOO.Properties.Resources.f_elconfidencial_com_original_d9e_66d_793_d9e66d793adbc994841e60850a17e61c;
+            this.pictureBox1.Image = global::pryPOO.Properties.Resources.FondoDePantalla;
             this.pictureBox1.Location = new System.Drawing.Point(0, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1200, 900);
+            this.pictureBox1.Size = new System.Drawing.Size(2560, 1440);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // informaciónToolStripMenuItem
+            // listaSimpleToolStripMenuItem
             // 
-            this.informaciónToolStripMenuItem.Name = "informaciónToolStripMenuItem";
-            this.informaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.informaciónToolStripMenuItem.Text = "Información";
+            this.listaSimpleToolStripMenuItem.Name = "listaSimpleToolStripMenuItem";
+            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaSimpleToolStripMenuItem.Text = "Lista Simple";
+            this.listaSimpleToolStripMenuItem.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -187,5 +196,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmDeuda;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem informaciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaSimpleToolStripMenuItem;
     }
 }
