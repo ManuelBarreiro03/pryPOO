@@ -37,11 +37,14 @@
             this.tsmDeuda = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmCola = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPila = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaSimpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personalizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listaSimpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaSimpleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaDobleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grafoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,19 +67,19 @@
             this.toolStripSeparator,
             this.informaciónToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
-            this.archivoToolStripMenuItem.Text = "Datos";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Sistema";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(136, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
             // 
             // informaciónToolStripMenuItem
             // 
             this.informaciónToolStripMenuItem.Name = "informaciónToolStripMenuItem";
-            this.informaciónToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.informaciónToolStripMenuItem.Text = "Información";
+            this.informaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.informaciónToolStripMenuItem.Text = "Datos";
             // 
             // editarToolStripMenuItem
             // 
@@ -85,10 +88,11 @@
             this.tsmDeuda,
             this.tsmCola,
             this.tsmPila,
-            this.listaSimpleToolStripMenuItem});
+            this.listaSimpleToolStripMenuItem,
+            this.listaToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.editarToolStripMenuItem.Text = "No lineal";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.editarToolStripMenuItem.Text = "Lineal";
             // 
             // toolStripSeparator3
             // 
@@ -120,26 +124,27 @@
             this.tsmPila.Text = "Pila";
             this.tsmPila.Click += new System.EventHandler(this.tsmPila_Click);
             // 
+            // listaSimpleToolStripMenuItem
+            // 
+            this.listaSimpleToolStripMenuItem.Name = "listaSimpleToolStripMenuItem";
+            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaSimpleToolStripMenuItem.Text = "Lista Simple";
+            this.listaSimpleToolStripMenuItem.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem_Click);
+            // 
             // herramientasToolStripMenuItem
             // 
             this.herramientasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.personalizarToolStripMenuItem,
-            this.opcionesToolStripMenuItem});
+            this.opcionesToolStripMenuItem,
+            this.grafoToolStripMenuItem});
             this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
-            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.herramientasToolStripMenuItem.Text = "Lineal";
-            // 
-            // personalizarToolStripMenuItem
-            // 
-            this.personalizarToolStripMenuItem.Name = "personalizarToolStripMenuItem";
-            this.personalizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.personalizarToolStripMenuItem.Text = "&Personalizar";
+            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.herramientasToolStripMenuItem.Text = "No Lineal";
             // 
             // opcionesToolStripMenuItem
             // 
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
             this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.opcionesToolStripMenuItem.Text = "&Opciones";
+            this.opcionesToolStripMenuItem.Text = "Arbol";
             // 
             // pictureBox1
             // 
@@ -154,12 +159,32 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // listaSimpleToolStripMenuItem
+            // listaToolStripMenuItem
             // 
-            this.listaSimpleToolStripMenuItem.Name = "listaSimpleToolStripMenuItem";
-            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.listaSimpleToolStripMenuItem.Text = "Lista Simple";
-            this.listaSimpleToolStripMenuItem.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem_Click);
+            this.listaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listaSimpleToolStripMenuItem1,
+            this.listaDobleToolStripMenuItem});
+            this.listaToolStripMenuItem.Name = "listaToolStripMenuItem";
+            this.listaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaToolStripMenuItem.Text = "Lista";
+            // 
+            // listaSimpleToolStripMenuItem1
+            // 
+            this.listaSimpleToolStripMenuItem1.Name = "listaSimpleToolStripMenuItem1";
+            this.listaSimpleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listaSimpleToolStripMenuItem1.Text = "Lista Simple";
+            // 
+            // listaDobleToolStripMenuItem
+            // 
+            this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
+            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaDobleToolStripMenuItem.Text = "Lista Doble";
+            // 
+            // grafoToolStripMenuItem
+            // 
+            this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
+            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grafoToolStripMenuItem.Text = "Grafo";
             // 
             // frmPrincipal
             // 
@@ -191,11 +216,14 @@
         private System.Windows.Forms.ToolStripMenuItem tsmCola;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem herramientasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem personalizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmDeuda;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem informaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaSimpleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaSimpleToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem listaDobleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grafoToolStripMenuItem;
     }
 }

@@ -46,11 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsArbol.cs" />
     <Compile Include="clsCliente.cs" />
     <Compile Include="clsCola.cs" />
+    <Compile Include="clsListaDoble.cs" />
     <Compile Include="clsListaSimple.cs" />
     <Compile Include="clsNodo.cs" />
     <Compile Include="clsPila.cs" />
+    <Compile Include="frmArbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArbol.Designer.cs">
+      <DependentUpon>frmArbol.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDeuda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +70,12 @@
     </Compile>
     <Compile Include="frmCola.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaDoble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaDoble.Designer.cs">
+      <DependentUpon>frmListaDoble.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListaSimple.cs">
       <SubType>Form</SubType>
