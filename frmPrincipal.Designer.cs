@@ -37,14 +37,13 @@
             this.tsmDeuda = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmCola = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPila = new System.Windows.Forms.ToolStripMenuItem();
-            this.listaSimpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaSimpleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDobleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.herramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grafoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,12 +72,12 @@
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(101, 6);
             // 
             // informaciónToolStripMenuItem
             // 
             this.informaciónToolStripMenuItem.Name = "informaciónToolStripMenuItem";
-            this.informaciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.informaciónToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.informaciónToolStripMenuItem.Text = "Datos";
             // 
             // editarToolStripMenuItem
@@ -88,7 +87,6 @@
             this.tsmDeuda,
             this.tsmCola,
             this.tsmPila,
-            this.listaSimpleToolStripMenuItem,
             this.listaToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
             this.editarToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
@@ -97,12 +95,12 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(134, 6);
             // 
             // tsmDeuda
             // 
             this.tsmDeuda.Name = "tsmDeuda";
-            this.tsmDeuda.Size = new System.Drawing.Size(180, 22);
+            this.tsmDeuda.Size = new System.Drawing.Size(137, 22);
             this.tsmDeuda.Text = "Deuda";
             this.tsmDeuda.Click += new System.EventHandler(this.tsmDeuda_Click);
             // 
@@ -111,7 +109,7 @@
             this.tsmCola.Name = "tsmCola";
             this.tsmCola.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
             this.tsmCola.ShowShortcutKeys = false;
-            this.tsmCola.Size = new System.Drawing.Size(180, 22);
+            this.tsmCola.Size = new System.Drawing.Size(137, 22);
             this.tsmCola.Text = "Cola";
             this.tsmCola.Click += new System.EventHandler(this.tsmCola_Click);
             // 
@@ -120,44 +118,9 @@
             this.tsmPila.Name = "tsmPila";
             this.tsmPila.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             this.tsmPila.ShowShortcutKeys = false;
-            this.tsmPila.Size = new System.Drawing.Size(180, 22);
+            this.tsmPila.Size = new System.Drawing.Size(137, 22);
             this.tsmPila.Text = "Pila";
             this.tsmPila.Click += new System.EventHandler(this.tsmPila_Click);
-            // 
-            // listaSimpleToolStripMenuItem
-            // 
-            this.listaSimpleToolStripMenuItem.Name = "listaSimpleToolStripMenuItem";
-            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.listaSimpleToolStripMenuItem.Text = "Lista Simple";
-            this.listaSimpleToolStripMenuItem.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem_Click);
-            // 
-            // herramientasToolStripMenuItem
-            // 
-            this.herramientasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opcionesToolStripMenuItem,
-            this.grafoToolStripMenuItem});
-            this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
-            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.herramientasToolStripMenuItem.Text = "No Lineal";
-            // 
-            // opcionesToolStripMenuItem
-            // 
-            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.opcionesToolStripMenuItem.Text = "Arbol";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::pryPOO.Properties.Resources.FondoDePantalla;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(2560, 1440);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // listaToolStripMenuItem
             // 
@@ -173,18 +136,49 @@
             this.listaSimpleToolStripMenuItem1.Name = "listaSimpleToolStripMenuItem1";
             this.listaSimpleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.listaSimpleToolStripMenuItem1.Text = "Lista Simple";
+            this.listaSimpleToolStripMenuItem1.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem1_Click);
             // 
             // listaDobleToolStripMenuItem
             // 
             this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
             this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listaDobleToolStripMenuItem.Text = "Lista Doble";
+            this.listaDobleToolStripMenuItem.Click += new System.EventHandler(this.listaDobleToolStripMenuItem_Click);
+            // 
+            // herramientasToolStripMenuItem
+            // 
+            this.herramientasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.opcionesToolStripMenuItem,
+            this.grafoToolStripMenuItem});
+            this.herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
+            this.herramientasToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.herramientasToolStripMenuItem.Text = "No Lineal";
+            // 
+            // opcionesToolStripMenuItem
+            // 
+            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.opcionesToolStripMenuItem.Text = "Arbol";
+            this.opcionesToolStripMenuItem.Click += new System.EventHandler(this.opcionesToolStripMenuItem_Click);
             // 
             // grafoToolStripMenuItem
             // 
             this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
             this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.grafoToolStripMenuItem.Text = "Grafo";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::pryPOO.Properties.Resources.FondoDePantalla;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(2560, 1440);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // frmPrincipal
             // 
@@ -220,7 +214,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmDeuda;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem informaciónToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listaSimpleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaSimpleToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem listaDobleToolStripMenuItem;

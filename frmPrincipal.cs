@@ -35,10 +35,22 @@ namespace pryPOO
             ventanaDeuda.Show();
         }
 
-        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void opcionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListaSimple ventanaDeuda = new frmListaSimple();
-            ventanaDeuda.Show();
+            frmArbol frmArbol = new frmArbol();
+            frmArbol.Show();
+        }
+
+        private void listaSimpleToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmListaSimple frmListaSimple = new frmListaSimple();
+            frmListaSimple.Show();
+        }
+
+        private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDoble frmListaSimple = new frmListaDoble();
+            frmListaSimple.Show();
         }
     }
 }

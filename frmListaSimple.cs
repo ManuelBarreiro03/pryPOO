@@ -31,7 +31,6 @@ namespace pryPOO
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
-            cmdAgregar.Enabled = false;
         }
 
         private void cmdEliminar_Click(object sender, EventArgs e)

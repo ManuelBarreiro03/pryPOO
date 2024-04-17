@@ -97,6 +97,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmArbol.resx">
+      <DependentUpon>frmArbol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDeuda.resx">
       <DependentUpon>frmDeuda.cs</DependentUpon>
     </EmbeddedResource>
