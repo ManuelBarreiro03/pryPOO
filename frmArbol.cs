@@ -40,6 +40,7 @@ namespace pryPOO
         private void cmdEquilibrar_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void rbnInOrdenAsc_CheckedChanged(object sender, EventArgs e)
