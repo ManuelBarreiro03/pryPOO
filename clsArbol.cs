@@ -47,55 +47,106 @@ namespace pryPOO
                 }
             }
         }
-        public void Recorrer(DataGridView Grilla)
+        public void RecorrerInAsc(DataGridView Grilla)
         {
             Grilla.Rows.Clear();
-            InOrden(Grilla, Raiz);
+            InOrdenAsc(Grilla, Raiz);
         }
-        public void InOrden(DataGridView Grilla, clsNodo Raiz)
+        public void InOrdenAsc(DataGridView Grilla, clsNodo Raiz)
         {
             if (Raiz.Izquierdo != null)
             {
-                InOrden(Grilla, Raiz.Izquierdo);
+                InOrdenAsc(Grilla, Raiz.Izquierdo);
             }
             Grilla.Rows.Add(Raiz.Codigo, Raiz.Nombre, Raiz.Tramite);
             if (Raiz.Derecho != null)
             {
-                InOrden(Grilla, Raiz.Derecho);
+                InOrdenAsc(Grilla, Raiz.Derecho);
             }
         }
-        public void Recorrer(ListBox Lista)
+        public void RecorrerInDes(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            InOrdenDes(Grilla, Raiz);
+        }
+        public void InOrdenDes(DataGridView Grilla, clsNodo Raiz)
+        {
+            if (Raiz.Derecho != null)
+            {
+                InOrdenDes(Grilla, Raiz.Izquierdo);
+            }
+            Grilla.Rows.Add(Raiz.Codigo, Raiz.Nombre, Raiz.Tramite);
+            if (Raiz.Izquierdo != null)
+            {
+                InOrdenDes(Grilla, Raiz.Derecho);
+            }
+        }
+        public void RecorrerInAsc(ListBox Lista)
         {
             Lista.Items.Clear();
-            InOrden(Lista, Raiz);
+            InOrdenAsc(Lista, Raiz);
         }
-        public void InOrden(ListBox Lista, clsNodo Raiz)
+        public void InOrdenAsc(ListBox Lista, clsNodo Raiz)
         {
             if (Raiz.Izquierdo != null)
             {
-                InOrden(Lista, Raiz.Izquierdo);
+                InOrdenAsc(Lista, Raiz.Izquierdo);
             }
             Lista.Items.Add(Raiz.Codigo);
             if (Raiz.Derecho != null)
             {
-                InOrden(Lista, Raiz.Derecho);
+                InOrdenAsc(Lista, Raiz.Derecho);
             }
         }
-        public void Recorrer(ComboBox Lista)
+        public void RecorrerInDes(ListBox Lista)
         {
             Lista.Items.Clear();
-            InOrden(Lista, Raiz);
+            InOrdenDes(Lista, Raiz);
         }
-        public void InOrden(ComboBox Lista, clsNodo Raiz)
+        public void InOrdenDes(ListBox Lista, clsNodo Raiz)
+        {
+            if (Raiz.Derecho != null)
+            {
+                InOrdenDes(Lista, Raiz.Izquierdo);
+            }
+            Lista.Items.Add(Raiz.Codigo);
+            if (Raiz.Izquierdo != null)
+            {
+                InOrdenDes(Lista, Raiz.Derecho);
+            }
+        }
+        public void RecorrerInAsc(ComboBox Lista)
+        {
+            Lista.Items.Clear();
+            InOrdenAsc(Lista, Raiz);
+        }
+        public void InOrdenAsc(ComboBox Lista, clsNodo Raiz)
         {
             if (Raiz.Izquierdo != null)
             {
-                InOrden(Lista, Raiz.Izquierdo);
+                InOrdenAsc(Lista, Raiz.Izquierdo);
             }
             Lista.Items.Add(Raiz.Codigo);
             if (Raiz.Derecho != null)
             {
-                InOrden(Lista, Raiz.Derecho);
+                InOrdenAsc(Lista, Raiz.Derecho);
+            }
+        }
+        public void RecorrerInDes(ComboBox Lista)
+        {
+            Lista.Items.Clear();
+            InOrdenDes(Lista, Raiz);
+        }
+        public void InOrdenDes(ComboBox Lista, clsNodo Raiz)
+        {
+            if (Raiz.Derecho != null)
+            {
+                InOrdenDes(Lista, Raiz.Izquierdo);
+            }
+            Lista.Items.Add(Raiz.Codigo);
+            if (Raiz.Izquierdo != null)
+            {
+                InOrdenDes(Lista, Raiz.Derecho);
             }
         }
         public void Recorrer(TreeView tree)
@@ -103,21 +154,56 @@ namespace pryPOO
             tree.Nodes.Clear();
             TreeNode Padre = new TreeNode("Arbol");
             tree.Nodes.Add(Padre);
-            PreOrden(Raiz, Padre);
+            PreOrdenAsc(Raiz, Padre);
             tree.ExpandAll();
         }
-        private void PreOrden(clsNodo Raiz, TreeNode nodoTree)
+        private void PreOrdenAsc(clsNodo Raiz, TreeNode nodoTree)
         {
             TreeNode Padre = new TreeNode(Raiz.Codigo.ToString());
             nodoTree.Nodes.Add(Padre);
             if (Raiz.Izquierdo != null)
             {
-                PreOrden(Raiz.Izquierdo, Padre);
+                PreOrdenAsc(Raiz.Izquierdo, Padre);
             }
             if (Raiz.Derecho != null)
             {
-                PreOrden(Raiz.Derecho, Padre);
+                PreOrdenAsc(Raiz.Derecho, Padre);
             }
         }
+        public void RecorrerPre(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PreOrden(Grilla, Raiz);
+        }
+        public void PreOrden(DataGridView Grilla, clsNodo Raiz)
+        {
+            Grilla.Rows.Add(Raiz.Codigo, Raiz.Nombre, Raiz.Tramite);
+            if (Raiz.Izquierdo != null)
+            {
+                PreOrden(Grilla, Raiz.Izquierdo);
+            }
+            if (Raiz.Derecho != null)
+            {
+                PreOrden(Grilla, Raiz.Derecho);
+            }
+        }
+        public void RecorrerPost(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PostOrden(Grilla, Raiz);
+        }
+        public void PostOrden(DataGridView Grilla, clsNodo Raiz)
+        {
+            if (Raiz.Izquierdo != null)
+            {
+                PostOrden(Grilla, Raiz.Izquierdo);
+            }
+            if (Raiz.Derecho != null)
+            {
+                PostOrden(Grilla, Raiz.Derecho);
+            }
+            Grilla.Rows.Add(Raiz.Codigo, Raiz.Nombre, Raiz.Tramite);
+        }
+
     }
 }

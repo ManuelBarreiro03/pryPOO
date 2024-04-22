@@ -46,9 +46,10 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.treeView = new System.Windows.Forms.TreeView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbnInOrden = new System.Windows.Forms.RadioButton();
-            this.rbnPreOrden = new System.Windows.Forms.RadioButton();
+            this.rbnInOrdenDes = new System.Windows.Forms.RadioButton();
             this.rbnPostOrden = new System.Windows.Forms.RadioButton();
+            this.rbnPreOrden = new System.Windows.Forms.RadioButton();
+            this.rbnInOrdenAsc = new System.Windows.Forms.RadioButton();
             this.cmdEquilibrar = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -207,51 +208,69 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rbnInOrdenDes);
             this.groupBox1.Controls.Add(this.rbnPostOrden);
             this.groupBox1.Controls.Add(this.rbnPreOrden);
-            this.groupBox1.Controls.Add(this.rbnInOrden);
+            this.groupBox1.Controls.Add(this.rbnInOrdenAsc);
             this.groupBox1.Location = new System.Drawing.Point(12, 187);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(201, 165);
+            this.groupBox1.Size = new System.Drawing.Size(242, 165);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Orden";
             // 
-            // rbnInOrden
+            // rbnInOrdenDes
             // 
-            this.rbnInOrden.AutoSize = true;
-            this.rbnInOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbnInOrden.Location = new System.Drawing.Point(48, 30);
-            this.rbnInOrden.Name = "rbnInOrden";
-            this.rbnInOrden.Size = new System.Drawing.Size(82, 21);
-            this.rbnInOrden.TabIndex = 0;
-            this.rbnInOrden.TabStop = true;
-            this.rbnInOrden.Text = "In-Orden";
-            this.rbnInOrden.UseVisualStyleBackColor = true;
-            // 
-            // rbnPreOrden
-            // 
-            this.rbnPreOrden.AutoSize = true;
-            this.rbnPreOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbnPreOrden.Location = new System.Drawing.Point(48, 74);
-            this.rbnPreOrden.Name = "rbnPreOrden";
-            this.rbnPreOrden.Size = new System.Drawing.Size(93, 21);
-            this.rbnPreOrden.TabIndex = 1;
-            this.rbnPreOrden.TabStop = true;
-            this.rbnPreOrden.Text = "Pre-Orden";
-            this.rbnPreOrden.UseVisualStyleBackColor = true;
+            this.rbnInOrdenDes.AutoSize = true;
+            this.rbnInOrdenDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbnInOrdenDes.Location = new System.Drawing.Point(23, 46);
+            this.rbnInOrdenDes.Name = "rbnInOrdenDes";
+            this.rbnInOrdenDes.Size = new System.Drawing.Size(170, 21);
+            this.rbnInOrdenDes.TabIndex = 3;
+            this.rbnInOrdenDes.TabStop = true;
+            this.rbnInOrdenDes.Text = "In-Orden Descendente";
+            this.rbnInOrdenDes.UseVisualStyleBackColor = true;
+            this.rbnInOrdenDes.CheckedChanged += new System.EventHandler(this.rbnInOrdenDes_CheckedChanged);
             // 
             // rbnPostOrden
             // 
             this.rbnPostOrden.AutoSize = true;
             this.rbnPostOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbnPostOrden.Location = new System.Drawing.Point(49, 118);
+            this.rbnPostOrden.Location = new System.Drawing.Point(23, 100);
             this.rbnPostOrden.Name = "rbnPostOrden";
             this.rbnPostOrden.Size = new System.Drawing.Size(99, 21);
             this.rbnPostOrden.TabIndex = 2;
             this.rbnPostOrden.TabStop = true;
             this.rbnPostOrden.Text = "Post-Orden";
             this.rbnPostOrden.UseVisualStyleBackColor = true;
+            this.rbnPostOrden.CheckedChanged += new System.EventHandler(this.rbnPostOrden_CheckedChanged);
+            // 
+            // rbnPreOrden
+            // 
+            this.rbnPreOrden.AutoSize = true;
+            this.rbnPreOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbnPreOrden.Location = new System.Drawing.Point(23, 73);
+            this.rbnPreOrden.Name = "rbnPreOrden";
+            this.rbnPreOrden.Size = new System.Drawing.Size(93, 21);
+            this.rbnPreOrden.TabIndex = 1;
+            this.rbnPreOrden.TabStop = true;
+            this.rbnPreOrden.Text = "Pre-Orden";
+            this.rbnPreOrden.UseVisualStyleBackColor = true;
+            this.rbnPreOrden.CheckedChanged += new System.EventHandler(this.rbnPreOrden_CheckedChanged);
+            // 
+            // rbnInOrdenAsc
+            // 
+            this.rbnInOrdenAsc.AutoSize = true;
+            this.rbnInOrdenAsc.Checked = true;
+            this.rbnInOrdenAsc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.rbnInOrdenAsc.Location = new System.Drawing.Point(23, 19);
+            this.rbnInOrdenAsc.Name = "rbnInOrdenAsc";
+            this.rbnInOrdenAsc.Size = new System.Drawing.Size(161, 21);
+            this.rbnInOrdenAsc.TabIndex = 0;
+            this.rbnInOrdenAsc.TabStop = true;
+            this.rbnInOrdenAsc.Text = "In-Orden Ascendente";
+            this.rbnInOrdenAsc.UseVisualStyleBackColor = true;
+            this.rbnInOrdenAsc.CheckedChanged += new System.EventHandler(this.rbnInOrdenAsc_CheckedChanged);
             // 
             // cmdEquilibrar
             // 
@@ -275,6 +294,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Name = "frmArbol";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Arbol";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -309,7 +329,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbnPostOrden;
         private System.Windows.Forms.RadioButton rbnPreOrden;
-        private System.Windows.Forms.RadioButton rbnInOrden;
+        private System.Windows.Forms.RadioButton rbnInOrdenAsc;
         private System.Windows.Forms.Button cmdEquilibrar;
+        private System.Windows.Forms.RadioButton rbnInOrdenDes;
     }
 }

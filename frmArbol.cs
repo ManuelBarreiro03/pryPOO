@@ -30,9 +30,8 @@ namespace pryPOO
             objNodo.Nombre = txtNombre.Text;
             objNodo.Tramite = txtTramite.Text;
             Arbol.Agregar(objNodo);
-            Arbol.Recorrer(dgvGrilla);
+            Arbol.RecorrerInAsc(dgvGrilla);
             Arbol.Recorrer(treeView);
-            Arbol.Recorrer(cmbEliminar);
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
@@ -41,6 +40,38 @@ namespace pryPOO
         private void cmdEquilibrar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rbnInOrdenAsc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Arbol.Raiz != null)
+            {
+                Arbol.RecorrerInAsc(dgvGrilla);
+                Arbol.RecorrerInAsc(cmbEliminar);
+            }
+            else
+            {
+                MessageBox.Show("no existe la raiz");
+            }
+            
+        }
+
+        private void rbnInOrdenDes_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerInDes(dgvGrilla);
+            Arbol.RecorrerInDes(cmbEliminar);
+        }
+
+        private void rbnPreOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerInAsc(dgvGrilla);
+            Arbol.RecorrerInAsc(cmbEliminar);
+        }
+
+        private void rbnPostOrden_CheckedChanged(object sender, EventArgs e)
+        {
+            Arbol.RecorrerInAsc(dgvGrilla);
+            Arbol.RecorrerInAsc(cmbEliminar);
         }
     }
 }
