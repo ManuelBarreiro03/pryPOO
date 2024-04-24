@@ -179,9 +179,9 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvGrilla.Location = new System.Drawing.Point(260, 187);
+            this.dgvGrilla.Location = new System.Drawing.Point(211, 187);
             this.dgvGrilla.Name = "dgvGrilla";
-            this.dgvGrilla.Size = new System.Drawing.Size(311, 165);
+            this.dgvGrilla.Size = new System.Drawing.Size(360, 165);
             this.dgvGrilla.TabIndex = 12;
             // 
             // Column1
@@ -214,7 +214,7 @@
             this.groupBox1.Controls.Add(this.rbnInOrdenAsc);
             this.groupBox1.Location = new System.Drawing.Point(12, 187);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(242, 165);
+            this.groupBox1.Size = new System.Drawing.Size(193, 165);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Orden";

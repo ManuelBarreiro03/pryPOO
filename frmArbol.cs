@@ -20,7 +20,8 @@ namespace pryPOO
         clsArbol Arbol = new clsArbol();
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-
+            Int32 x = Convert.ToInt32(cmbEliminar.Text);
+            clsArbol.Eliminar(x);
         }
 
         private void cmdAgregar_Click(object sender, EventArgs e)
@@ -59,20 +60,39 @@ namespace pryPOO
 
         private void rbnInOrdenDes_CheckedChanged(object sender, EventArgs e)
         {
-            Arbol.RecorrerInDes(dgvGrilla);
-            Arbol.RecorrerInDes(cmbEliminar);
+            if (Arbol.Raiz != null)
+            {
+                Arbol.RecorrerInDes(dgvGrilla);
+                Arbol.RecorrerInDes(cmbEliminar);
+            }
+            else
+            {
+                MessageBox.Show("no existe la raiz");
+            }
         }
 
         private void rbnPreOrden_CheckedChanged(object sender, EventArgs e)
         {
-            Arbol.RecorrerInAsc(dgvGrilla);
-            Arbol.RecorrerInAsc(cmbEliminar);
+            if (Arbol.Raiz != null)
+            {
+                Arbol.RecorrerPre(dgvGrilla);
+            }
+            else
+            {
+                MessageBox.Show("no existe la raiz");
+            }
         }
 
         private void rbnPostOrden_CheckedChanged(object sender, EventArgs e)
         {
-            Arbol.RecorrerInAsc(dgvGrilla);
-            Arbol.RecorrerInAsc(cmbEliminar);
+            if (Arbol.Raiz != null)
+            {
+                Arbol.RecorrerPost(dgvGrilla);
+            }
+            else
+            {
+                MessageBox.Show("no existe la raiz");
+            }
         }
     }
 }
