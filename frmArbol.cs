@@ -21,7 +21,6 @@ namespace pryPOO
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
             Int32 x = Convert.ToInt32(cmbEliminar.Text);
-            clsArbol.Eliminar(x);
         }
 
         private void cmdAgregar_Click(object sender, EventArgs e)
