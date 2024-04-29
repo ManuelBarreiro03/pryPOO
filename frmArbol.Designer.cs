@@ -274,9 +274,9 @@
             // 
             // cmdEquilibrar
             // 
-            this.cmdEquilibrar.Location = new System.Drawing.Point(412, 137);
+            this.cmdEquilibrar.Location = new System.Drawing.Point(408, 137);
             this.cmdEquilibrar.Name = "cmdEquilibrar";
-            this.cmdEquilibrar.Size = new System.Drawing.Size(158, 34);
+            this.cmdEquilibrar.Size = new System.Drawing.Size(162, 34);
             this.cmdEquilibrar.TabIndex = 15;
             this.cmdEquilibrar.Text = "Equilibrar";
             this.cmdEquilibrar.UseVisualStyleBackColor = true;

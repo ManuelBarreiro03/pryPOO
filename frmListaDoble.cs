@@ -21,17 +21,42 @@ namespace pryPOO
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo objNodo = new clsNodo();
-            objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-            objNodo.Nombre = txtNombre.Text;
-            objNodo.Tramite = txtTramite.Text;
-            Lista.Agregar(objNodo);
-            Lista.RecorrerAsc(dgvGrilla);
-            Lista.RecorrerAsc(lstLista);
-            Lista.RecorrerAsc(cmbEliminar);
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            if (txtCodigo.Text != "")
+            {
+                if (txtNombre.Text != "")
+                {
+                    if (txtTramite.Text != "")
+                    {
+                        clsNodo objNodo = new clsNodo();
+                        objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+                        objNodo.Nombre = txtNombre.Text;
+                        objNodo.Tramite = txtTramite.Text;
+                        Lista.Agregar(objNodo);
+                        Lista.RecorrerAsc(dgvGrilla);
+                        Lista.RecorrerAsc(lstLista);
+                        Lista.RecorrerAsc(cmbEliminar);
+                        txtCodigo.Text = "";
+                        txtNombre.Text = "";
+                        txtTramite.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Campo vacio");
+                        txtTramite.Focus();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Campo vacio");
+                    txtNombre.Focus();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Campo vacio");
+                txtCodigo.Focus();
+            }
+
         }
 
         private void cmdEliminar_Click(object sender, EventArgs e)
@@ -57,10 +82,18 @@ namespace pryPOO
                 Lista.RecorrerAsc(dgvGrilla);
                 Lista.RecorrerAsc(lstLista);
             }
-            else
+        }
+
+        private void rbtDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            try
             {
                 Lista.RecorrerDes(dgvGrilla);
                 Lista.RecorrerDes(lstLista);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.ToString());
             }
         }
     }

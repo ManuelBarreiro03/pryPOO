@@ -20,27 +20,53 @@ namespace pryPOO
         clsArbol Arbol = new clsArbol();
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-            Int32 x = Convert.ToInt32(cmbEliminar.Text);
+            Arbol.Eliminar(Convert.ToInt32(cmbEliminar.Text));
+            Arbol.RecorrerInAsc(dgvGrilla);
         }
 
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo objNodo = new clsNodo();
-            objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-            objNodo.Nombre = txtNombre.Text;
-            objNodo.Tramite = txtTramite.Text;
-            Arbol.Agregar(objNodo);
-            Arbol.RecorrerInAsc(dgvGrilla);
-            Arbol.Recorrer(treeView);
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            if (txtCodigo.Text != "")
+            {
+                if (txtNombre.Text != "")
+                {
+                    if (txtTramite.Text != "")
+                    {
+                        clsNodo objNodo = new clsNodo();
+                        objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+                        objNodo.Nombre = txtNombre.Text;
+                        objNodo.Tramite = txtTramite.Text;
+                        Arbol.Agregar(objNodo);
+                        Arbol.RecorrerInAsc(dgvGrilla);
+                        Arbol.RecorrerInAsc(cmbEliminar);
+                        Arbol.Recorrer(treeView);
+                        txtCodigo.Text = "";
+                        txtNombre.Text = "";
+                        txtTramite.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Campo vacio");
+                        txtTramite.Focus();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Campo vacio");
+                    txtNombre.Focus();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Campo vacio");
+                txtCodigo.Focus();
+            }
+            
         }
 
         private void cmdEquilibrar_Click(object sender, EventArgs e)
         {
-
-
+            Arbol.Equilibrar();
         }
 
         private void rbnInOrdenAsc_CheckedChanged(object sender, EventArgs e)

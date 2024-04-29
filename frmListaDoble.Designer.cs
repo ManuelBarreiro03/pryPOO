@@ -239,6 +239,7 @@
             this.rbtDescendente.TabIndex = 1;
             this.rbtDescendente.Text = "Descendente";
             this.rbtDescendente.UseVisualStyleBackColor = true;
+            this.rbtDescendente.CheckedChanged += new System.EventHandler(this.rbtDescendente_CheckedChanged);
             // 
             // rbtAscendente
             // 

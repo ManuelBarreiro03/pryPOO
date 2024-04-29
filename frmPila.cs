@@ -19,16 +19,40 @@ namespace pryPOO
         clsPila PilaDeArchivos = new clsPila();
         private void cmdAgregar_Click(object sender, EventArgs e)
         {
-            clsNodo objNodo = new clsNodo();
-            objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
-            objNodo.Nombre = txtNombre.Text;
-            objNodo.Tramite = txtTramite.Text;
-            PilaDeArchivos.Agregar(objNodo);
-            PilaDeArchivos.Recorrer(dgvGrilla);
-            PilaDeArchivos.Recorrer(lstLista);
-            txtCodigo.Text = "";
-            txtNombre.Text = "";
-            txtTramite.Text = "";
+            if (txtCodigo.Text != "")
+            {
+                if (txtNombre.Text != "")
+                {
+                    if (txtTramite.Text != "")
+                    {
+                        clsNodo objNodo = new clsNodo();
+                        objNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+                        objNodo.Nombre = txtNombre.Text;
+                        objNodo.Tramite = txtTramite.Text;
+                        PilaDeArchivos.Agregar(objNodo);
+                        PilaDeArchivos.Recorrer(dgvGrilla);
+                        PilaDeArchivos.Recorrer(lstLista);
+                        txtCodigo.Text = "";
+                        txtNombre.Text = "";
+                        txtTramite.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Campo vacio");
+                        txtTramite.Focus();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Campo vacio");
+                    txtNombre.Focus();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Campo vacio");
+                txtCodigo.Focus();
+            }
         }
 
         private void cmdEliminar_Click(object sender, EventArgs e)
