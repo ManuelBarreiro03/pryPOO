@@ -30,9 +30,9 @@ namespace pryPOO
             }
             else
             {
-                Primero.Siguiente = Nuevo;
-                Primero.Siguiente = Primero;
+                Ultimo.Siguiente = Nuevo;
             }
+            Ultimo = Nuevo;
         }
         public void eliminar() 
         {

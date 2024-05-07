@@ -79,5 +79,25 @@ namespace pryPOO.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_05_07_at_19_32_36 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2024-05-07 at 19.32.36", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2024_05_07_at_19_321 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2024-05-07 at 19.321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

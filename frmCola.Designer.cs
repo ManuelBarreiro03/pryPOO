@@ -34,7 +34,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstLista = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmdAgregar = new System.Windows.Forms.Button();
             this.txtTramite = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.cmdAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -104,16 +104,6 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar";
-            // 
-            // cmdAgregar
-            // 
-            this.cmdAgregar.Location = new System.Drawing.Point(69, 140);
-            this.cmdAgregar.Name = "cmdAgregar";
-            this.cmdAgregar.Size = new System.Drawing.Size(129, 23);
-            this.cmdAgregar.TabIndex = 6;
-            this.cmdAgregar.Text = "Agregar";
-            this.cmdAgregar.UseVisualStyleBackColor = true;
-            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click);
             // 
             // txtTramite
             // 
@@ -243,6 +233,16 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Nombre";
             // 
+            // cmdAgregar
+            // 
+            this.cmdAgregar.Location = new System.Drawing.Point(69, 142);
+            this.cmdAgregar.Name = "cmdAgregar";
+            this.cmdAgregar.Size = new System.Drawing.Size(129, 23);
+            this.cmdAgregar.TabIndex = 7;
+            this.cmdAgregar.Text = "Agregar";
+            this.cmdAgregar.UseVisualStyleBackColor = true;
+            this.cmdAgregar.Click += new System.EventHandler(this.cmdAgregar_Click_1);
+            // 
             // frmCola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,7 +269,6 @@
         private System.Windows.Forms.DataGridView dgvGrilla;
         private System.Windows.Forms.ListBox lstLista;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button cmdAgregar;
         private System.Windows.Forms.TextBox txtTramite;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtCodigo;
@@ -287,5 +286,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Button cmdAgregar;
     }
 }
