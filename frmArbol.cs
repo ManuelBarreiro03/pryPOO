@@ -20,8 +20,8 @@ namespace pryPOO
         clsArbol Arbol = new clsArbol();
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-            Arbol.Eliminar(Convert.ToInt32(cmbEliminar.Text));
-            Arbol.RecorrerInAsc(dgvGrilla);
+            Arbol.Eliminar(Convert.ToInt32(cmbEliminar.Text)); 
+            Arbol.Recorrer(treeView);
         }
 
         private void cmdAgregar_Click(object sender, EventArgs e)
@@ -67,6 +67,7 @@ namespace pryPOO
         private void cmdEquilibrar_Click(object sender, EventArgs e)
         {
             Arbol.Equilibrar();
+            Arbol.Recorrer(treeView);
         }
 
         private void rbnInOrdenAsc_CheckedChanged(object sender, EventArgs e)

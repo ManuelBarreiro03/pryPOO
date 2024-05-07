@@ -44,6 +44,7 @@
             this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grafoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +54,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.editarToolStripMenuItem,
-            this.herramientasToolStripMenuItem});
+            this.herramientasToolStripMenuItem,
+            this.baseDeDatosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(653, 24);
@@ -95,12 +97,12 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(134, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(105, 6);
             // 
             // tsmDeuda
             // 
             this.tsmDeuda.Name = "tsmDeuda";
-            this.tsmDeuda.Size = new System.Drawing.Size(137, 22);
+            this.tsmDeuda.Size = new System.Drawing.Size(108, 22);
             this.tsmDeuda.Text = "Deuda";
             this.tsmDeuda.Click += new System.EventHandler(this.tsmDeuda_Click);
             // 
@@ -109,7 +111,7 @@
             this.tsmCola.Name = "tsmCola";
             this.tsmCola.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
             this.tsmCola.ShowShortcutKeys = false;
-            this.tsmCola.Size = new System.Drawing.Size(137, 22);
+            this.tsmCola.Size = new System.Drawing.Size(108, 22);
             this.tsmCola.Text = "Cola";
             this.tsmCola.Click += new System.EventHandler(this.tsmCola_Click);
             // 
@@ -118,7 +120,7 @@
             this.tsmPila.Name = "tsmPila";
             this.tsmPila.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             this.tsmPila.ShowShortcutKeys = false;
-            this.tsmPila.Size = new System.Drawing.Size(137, 22);
+            this.tsmPila.Size = new System.Drawing.Size(108, 22);
             this.tsmPila.Text = "Pila";
             this.tsmPila.Click += new System.EventHandler(this.tsmPila_Click);
             // 
@@ -128,20 +130,20 @@
             this.listaSimpleToolStripMenuItem1,
             this.listaDobleToolStripMenuItem});
             this.listaToolStripMenuItem.Name = "listaToolStripMenuItem";
-            this.listaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.listaToolStripMenuItem.Text = "Lista";
             // 
             // listaSimpleToolStripMenuItem1
             // 
             this.listaSimpleToolStripMenuItem1.Name = "listaSimpleToolStripMenuItem1";
-            this.listaSimpleToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listaSimpleToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
             this.listaSimpleToolStripMenuItem1.Text = "Lista Simple";
             this.listaSimpleToolStripMenuItem1.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem1_Click);
             // 
             // listaDobleToolStripMenuItem
             // 
             this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
-            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.listaDobleToolStripMenuItem.Text = "Lista Doble";
             this.listaDobleToolStripMenuItem.Click += new System.EventHandler(this.listaDobleToolStripMenuItem_Click);
             // 
@@ -157,14 +159,14 @@
             // opcionesToolStripMenuItem
             // 
             this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.opcionesToolStripMenuItem.Text = "Arbol";
             this.opcionesToolStripMenuItem.Click += new System.EventHandler(this.opcionesToolStripMenuItem_Click);
             // 
             // grafoToolStripMenuItem
             // 
             this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
-            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.grafoToolStripMenuItem.Text = "Grafo";
             // 
             // pictureBox1
@@ -179,6 +181,12 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // baseDeDatosToolStripMenuItem
+            // 
+            this.baseDeDatosToolStripMenuItem.Name = "baseDeDatosToolStripMenuItem";
+            this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
+            this.baseDeDatosToolStripMenuItem.Text = "Base de datos";
             // 
             // frmPrincipal
             // 
@@ -218,5 +226,6 @@
         private System.Windows.Forms.ToolStripMenuItem listaSimpleToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem listaDobleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grafoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem;
     }
 }

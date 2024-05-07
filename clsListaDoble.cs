@@ -44,6 +44,7 @@ namespace pryPOO
                     {
                         Ultimo.Siguiente = nvo;
                         nvo.Anterior = Ultimo;
+                        Ultimo = nvo;
                     }
                     else 
                     { 
