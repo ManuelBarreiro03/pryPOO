@@ -126,7 +126,7 @@ namespace pryPOO
         private void PreOrdenAsc(clsNodo Raiz, TreeNode nodoTree)
         {
             TreeNode Padre = new TreeNode(Raiz.Codigo.ToString());
-            nodoTree.Nodes.Add(Padre);
+            nodoTree.Nodes.Add(Padre); 
             if (Raiz.Izquierdo != null)
             {
                 PreOrdenAsc(Raiz.Izquierdo, Padre);
