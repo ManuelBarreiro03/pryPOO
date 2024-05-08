@@ -47,8 +47,8 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstLista = new System.Windows.Forms.ListBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.rbtDescendente = new System.Windows.Forms.RadioButton();
             this.rbtAscendente = new System.Windows.Forms.RadioButton();
+            this.rbtDescendente = new System.Windows.Forms.RadioButton();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -229,18 +229,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Orden";
             // 
-            // rbtDescendente
-            // 
-            this.rbtDescendente.AutoSize = true;
-            this.rbtDescendente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rbtDescendente.Location = new System.Drawing.Point(65, 46);
-            this.rbtDescendente.Name = "rbtDescendente";
-            this.rbtDescendente.Size = new System.Drawing.Size(110, 21);
-            this.rbtDescendente.TabIndex = 1;
-            this.rbtDescendente.Text = "Descendente";
-            this.rbtDescendente.UseVisualStyleBackColor = true;
-            this.rbtDescendente.CheckedChanged += new System.EventHandler(this.rbtDescendente_CheckedChanged);
-            // 
             // rbtAscendente
             // 
             this.rbtAscendente.AutoSize = true;
@@ -254,6 +242,18 @@
             this.rbtAscendente.Text = "Ascendente";
             this.rbtAscendente.UseVisualStyleBackColor = true;
             this.rbtAscendente.CheckedChanged += new System.EventHandler(this.rbtAscendente_CheckedChanged);
+            // 
+            // rbtDescendente
+            // 
+            this.rbtDescendente.AutoSize = true;
+            this.rbtDescendente.Location = new System.Drawing.Point(65, 46);
+            this.rbtDescendente.Name = "rbtDescendente";
+            this.rbtDescendente.Size = new System.Drawing.Size(102, 21);
+            this.rbtDescendente.TabIndex = 1;
+            this.rbtDescendente.TabStop = true;
+            this.rbtDescendente.Text = "Descendete";
+            this.rbtDescendente.UseVisualStyleBackColor = true;
+            this.rbtDescendente.CheckedChanged += new System.EventHandler(this.rbtDescendente_CheckedChanged);
             // 
             // frmListaDoble
             // 
@@ -300,7 +300,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.ListBox lstLista;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.RadioButton rbtDescendente;
         private System.Windows.Forms.RadioButton rbtAscendente;
+        private System.Windows.Forms.RadioButton rbtDescendente;
     }
 }
