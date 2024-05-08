@@ -65,6 +65,7 @@ namespace pryPOO
                 Lista.Eliminar(x);
                 Lista.Recorrer(dgvGrilla);
                 Lista.Recorrer(lstLista);
+                Lista.Recorrer(cmbEliminar);
             }
             else
             {

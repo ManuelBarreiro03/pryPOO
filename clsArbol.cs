@@ -9,11 +9,11 @@ namespace pryPOO
 {
     internal class clsArbol
     {
-        private clsNodo PrimarNodo;
+        private clsNodo PrimerNodo;
         public clsNodo Raiz
         {
-            get { return PrimarNodo; }
-            set { PrimarNodo = value; }
+            get { return PrimerNodo; }
+            set { PrimerNodo = value; }
         }
         public void Agregar(clsNodo nvo)
         {

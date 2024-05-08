@@ -20,8 +20,11 @@ namespace pryPOO
         clsArbol Arbol = new clsArbol();
         private void cmdEliminar_Click(object sender, EventArgs e)
         {
-            Arbol.Eliminar(Convert.ToInt32(cmbEliminar.Text)); 
+            Int32 x = Convert.ToInt32(cmbEliminar.Text);
+            Arbol.Eliminar(x);
+            Arbol.RecorrerInAsc(dgvGrilla);
             Arbol.Recorrer(treeView);
+            Arbol.RecorrerInAsc(cmbEliminar);
         }
 
         private void cmdAgregar_Click(object sender, EventArgs e)
