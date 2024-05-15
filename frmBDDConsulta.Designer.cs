@@ -46,9 +46,9 @@
             // 
             // cmdListar
             // 
-            this.cmdListar.Location = new System.Drawing.Point(775, 192);
+            this.cmdListar.Location = new System.Drawing.Point(766, 192);
             this.cmdListar.Name = "cmdListar";
-            this.cmdListar.Size = new System.Drawing.Size(75, 23);
+            this.cmdListar.Size = new System.Drawing.Size(84, 23);
             this.cmdListar.TabIndex = 1;
             this.cmdListar.Text = "Listar";
             this.cmdListar.UseVisualStyleBackColor = true;
