@@ -52,5 +52,11 @@ namespace pryPOO
             frmListaDoble frmListaSimple = new frmListaDoble();
             frmListaSimple.Show();
         }
+
+        private void consultasEnLaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBDDConsulta frmListaSimple = new frmBDDConsulta();
+            frmListaSimple.Show();
+        }
     }
 }
