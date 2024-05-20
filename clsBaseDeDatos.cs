@@ -15,8 +15,8 @@ namespace pryPOO
         private OleDbCommand comando = new OleDbCommand();
         private OleDbDataAdapter adaptador = new OleDbDataAdapter();
 
-        private string CadenaConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Libreria.mdb";
-        private string varCadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Libreria.mdb";
+        private string CadenaConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + @"../../" + "/Resources/Libreria.mdb";
+        private string varCadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + @"../../" + "/Resources/Libreria.mdb";
 
         public void Listar(DataGridView Grilla)
         {

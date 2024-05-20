@@ -58,5 +58,11 @@ namespace pryPOO
             frmBDDConsulta frmListaSimple = new frmBDDConsulta();
             frmListaSimple.Show();
         }
+
+        private void operacionesConTablasDeBasesDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTablasBDD frmListaSimple = new frmTablasBDD();
+            frmListaSimple.Show();
+        }
     }
 }
